@@ -16,11 +16,11 @@ public class MyService extends Service {
     private MyBinder mbinder = new MyBinder();
     @Override
     public void onCreate() {
-        Log.d(mess, "onCreate:executed ");
+        Log.d(mess, "onCreate:executed "+"wang");
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(condition!=true)
+                while(!condition)
                 {
                     try {
                         Thread.sleep(1000);
